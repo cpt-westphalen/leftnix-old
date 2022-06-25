@@ -2,9 +2,14 @@
   "name": "leftnix",
   "version": "0.1.0",
   "description": "Find out how commie your favourite movies are",
-  "keywords": ["movies", "rating", "politics"],
+  "keywords": [
+    "movies",
+    "rating",
+    "politics"
+  ],
   "main": "src/index.js",
   "dependencies": {
+    "axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1"
