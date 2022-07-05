@@ -1,22 +1,35 @@
 import { TopBar } from '../../components/TopBar';
 import MovieGalleries from '../../components/MovieGalleries';
 import { useState, useEffect } from 'react';
-import { fetchMoviesFromTmdbApi } from '../../assets/utils';
+import { fetchMoviesFromTmdbApi, POPULAR_API_URL } from '../../assets/utils';
 
 export default function MovieGalleriesPage() {
-	const [movies, setMovies] = useState(null);
+	const [movies, setMovies] = useState(getMoviesFromSessionStorage() || null);
 	const [dataIsLoaded, setDataIsLoaded] = useState(false);
 
-	const API_URL =
-		'https://api.themoviedb.org/3/discover/movie?api_key=c8871ccdf8ead9afddf163ea56f08b41&language=en-US&include_adult=false&include_video=true&page=1&primary_release_date.gte=2000-01-01&vote_count.gte=10000&vote_average.gte=7&sort_by=popularity.desc';
+	function getDataFromAPItoMovies(url) {
+		fetchMoviesFromTmdbApi(url)
+			.then((moviesArray) => {
+				setMovies(moviesArray);
+				sessionStorage.setItem('leftnix-movies', JSON.stringify(moviesArray));
+				setDataIsLoaded(true);
+			})
+			.catch((e) => {
+				console.log(e);
+				setDataIsLoaded(false);
+			});
+	}
+
+	function getMoviesFromSessionStorage() {
+		return JSON.parse(sessionStorage.getItem('leftnix-movies'));
+	}
 
 	useEffect(() => {
-		if (!dataIsLoaded) {
-			fetchMoviesFromTmdbApi(API_URL).then((res) => {
-				setMovies(res);
-				setDataIsLoaded(true);
-				console.log(movies);
-			});
+		if (movies && movies.length > 0) setDataIsLoaded(true);
+		else if (!movies && !dataIsLoaded) {
+			getDataFromAPItoMovies(POPULAR_API_URL);
+		} else {
+			console.log('Something went south.');
 		}
 	}, []);
 

@@ -2,7 +2,6 @@ import Slider from './Slider';
 import { BASE_IMG_URL } from '../assets/utils';
 
 export default function MovieItem({ movie }) {
-	console.log(movie);
 	const imgPath = `${BASE_IMG_URL}w300/${movie['poster_path']}`;
 	return (
 		<div className="movie-item">

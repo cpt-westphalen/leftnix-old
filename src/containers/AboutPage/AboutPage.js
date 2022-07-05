@@ -4,7 +4,7 @@ export default function AboutPage(props) {
 	return (
 		<main className="main-app-area">
 			<TopBar />
-			<p>This is the about page.</p>
+			<p>Nothing here yet.</p>
 		</main>
 	);
 }

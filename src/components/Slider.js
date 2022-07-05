@@ -1,6 +1,8 @@
 export default function Slider(props) {
 	const rate = Math.floor(
-		props.rating.toString()[2] ? props.rating.toString()[2] : 5
+		props.rating.toString()[2]
+			? props.rating.toString()[2]
+			: props.rating.toString()[0]
 	);
 	return (
 		<div className="slider-wrapper">

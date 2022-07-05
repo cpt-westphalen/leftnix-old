@@ -60,7 +60,7 @@ const TopSearch = () => {
 				id="top-search-icon"
 				alt="search!"
 				height="20px"
-				src="#"
+				src="search-black.svg"
 				onClick={() => {
 					console.log('clicked search!');
 				}}
