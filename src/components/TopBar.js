@@ -58,9 +58,9 @@ const TopSearch = () => {
 			/>
 			<img
 				id="top-search-icon"
-				alt="search icon"
+				alt="search!"
 				height="20px"
-				src="https://www.clker.com/cliparts/8/n/U/M/V/E/search-icon-th.png"
+				src="#"
 				onClick={() => {
 					console.log('clicked search!');
 				}}

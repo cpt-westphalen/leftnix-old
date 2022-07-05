@@ -1,13 +1,16 @@
-export default function Slider({ movie }) {
+export default function Slider(props) {
+	const rate = Math.floor(
+		props.rating.toString()[2] ? props.rating.toString()[2] : 5
+	);
 	return (
 		<div className="slider-wrapper">
 			<input
 				type="range"
 				min="1"
 				max="10"
-				value={movie.rating}
-				className={`slider rating-${movie.rating}`}
-				id={`slider-for-${movie.id}`}
+				value={rate}
+				className={`slider rating-${rate}`}
+				id={`slider-for-${props.id}`}
 				readOnly
 			/>
 		</div>
