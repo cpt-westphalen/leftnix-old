@@ -9,7 +9,8 @@ export default function MovieGalleries(props) {
 				<h2>loading movies...</h2>
 			)}
 			<div id="credit-movie-source">
-				Source: <img src="TMDB-LOGO.svg" width={200} alt="" />
+				Source:{' '}
+				<img src="TMDB-LOGO.svg" width={200} alt="The Movies Database Logo" />
 			</div>
 		</div>
 	);

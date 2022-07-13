@@ -3,6 +3,24 @@ import { BASE_IMG_URL } from '../assets/utils';
 
 export default function MovieItem({ movie }) {
 	const imgPath = `${BASE_IMG_URL}w300/${movie['poster_path']}`;
+	/*	
+	const overview = movie['overview'].slice(
+		0,
+		movie['overview'].indexOf('.') + 1
+	);
+	*/
+	let title = movie['title'];
+
+	const heroTitleIndex =
+		title.indexOf(':') + 1 ||
+		(title.toLowerCase().includes('harry potter and') ? 16 : 0);
+
+	const superTitle = title.slice(0, heroTitleIndex) || null;
+
+	if (!!heroTitleIndex) {
+		title = title.slice(heroTitleIndex);
+	}
+
 	return (
 		<div className="movie-item">
 			<img
@@ -11,7 +29,11 @@ export default function MovieItem({ movie }) {
 				alt="movie poster"
 				src={imgPath}
 			/>
-			<h3 className="movie-item-title">{movie['title']}</h3>
+
+			<div className="movie-item-title-wrap">
+				<h2 className="movie-item-title hero-title">{superTitle || '\n'}</h2>
+				<h3 className="movie-item-title">{title}</h3>
+			</div>
 			<p className="movie-item-desc">{movie['overview']}</p>
 			<Slider id={movie.id} rating={movie['vote_average']} />
 		</div>
