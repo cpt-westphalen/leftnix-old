@@ -1,7 +1,7 @@
-import Slider from './Slider';
-import { BASE_IMG_URL } from '../assets/utils';
+import Slider from '../Slider';
+import { BASE_IMG_URL } from '../../assets/utils';
 
-export default function MovieItem({ movie }) {
+export default function MovieCard({ movie }) {
 	const imgPath = `${BASE_IMG_URL}w300/${movie['poster_path']}`;
 	/*	
 	const overview = movie['overview'].slice(
@@ -40,7 +40,7 @@ export default function MovieItem({ movie }) {
 	);
 }
 
-MovieItem.defaultProps = {
+MovieCard.defaultProps = {
 	movie: {
 		id: 0,
 		cover: '#',

@@ -3,7 +3,7 @@ import MovieGalleries from '../../components/MovieGalleries';
 import { useState, useEffect } from 'react';
 import { fetchMoviesFromTmdbApi, POPULAR_API_URL } from '../../assets/utils';
 
-export default function MovieGalleriesPage() {
+export default function Gallery() {
 	const [movies, setMovies] = useState(getMoviesFromSessionStorage() || null);
 	const [dataIsLoaded, setDataIsLoaded] = useState(false);
 

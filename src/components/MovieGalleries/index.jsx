@@ -1,4 +1,4 @@
-import MovieGallery from './MovieGallery.js';
+import MovieGallery from '../MovieGallery/index.jsx';
 
 export default function MovieGalleries(props) {
 	return (

@@ -1,15 +1,15 @@
 import './styles.css';
 import { LeftSidebar } from './components/LeftSidebar';
-import Pages from './containers/Pages';
+import PageRouter from './PageRouter';
 import { useState } from 'react';
 
 export default function App() {
-	const [page, setPage] = useState('MovieGalleriesPage');
+	const [page, setPage] = useState('Gallery');
 
 	return (
 		<div className="App">
 			<LeftSidebar setPage={setPage} />
-			<Pages page={page} />
+			<PageRouter page={page} />
 		</div>
 	);
 }
