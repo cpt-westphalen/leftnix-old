@@ -2,8 +2,8 @@
 
 ## How commie is your favorite movie?
 
-_LEFTNIX is a movie rating platform that allows the audience to see though the flashy eye-candy million dollar money laundering schemes everyone insists to call movies... and I kind of forgot how the sentence started._
-_Wait... Oh, right: -to see through the movies and find out what ethics and political ideologies they present through their narative._
+_LEFTNIX is a movie rating platform that allows the audience to see though the flashy eye-candy million dollar money laundering schemes everyone insists to call movies... and... I kind of forgot how the sentence started._
+_Wait... Oh, right: -to see through the movies and find out what ethics and political ideologies they present through their narrative._
 
 > Are you ready to uncover the truth?!
 
