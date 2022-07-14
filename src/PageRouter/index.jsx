@@ -1,12 +1,12 @@
 import Gallery from './Gallery';
-import AboutPage from './AboutPage';
+import About from './About';
 
 export default function PageRouter(props) {
 	switch (props.page) {
 		case 'Gallery':
 			return <Gallery />;
 		case 'About':
-			return <AboutPage />;
+			return <About />;
 		default:
 			console.log('routePages went default!');
 			break;

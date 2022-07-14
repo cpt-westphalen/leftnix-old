@@ -1,6 +1,6 @@
 import { TopBar } from '../../components/TopBar';
 
-export default function AboutPage(props) {
+export default function About(props) {
 	return (
 		<main className="main-app-area">
 			<TopBar />
