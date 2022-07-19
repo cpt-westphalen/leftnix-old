@@ -14,15 +14,25 @@ export const LeftSidebar = (props) => {
 				<a
 					href="#"
 					onClick={() => {
-						props.setPage('MovieGalleriesPage');
+						props.setPage('Gallery');
 					}}
 				>
 					<p className="navLink">GALLERY</p>
 				</a>
-				<a href="#">
+				<a
+					href="#"
+					onClick={() => {
+						props.setPage('MyRatings');
+					}}
+				>
 					<p className="navLink">MY RATINGS</p>
 				</a>
-				<a href="#">
+				<a
+					href="#"
+					onClick={() => {
+						props.setPage('TopMovies');
+					}}
+				>
 					<p className="navLink">
 						TOP COMMIES
 						<br />
@@ -32,7 +42,7 @@ export const LeftSidebar = (props) => {
 				<a
 					href="#"
 					onClick={() => {
-						props.setPage('AboutPage');
+						props.setPage('About');
 					}}
 				>
 					<p className="navLink">ABOUT US</p>
