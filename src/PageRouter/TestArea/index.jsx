@@ -1,42 +1,53 @@
+import { useState } from 'react';
 import './styles.css';
+import Button from '../../components/Button';
 
 export default function TestArea(props) {
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleClick = () => {
+		setIsModalOpen(!isModalOpen);
+	};
+
 	return (
 		<div className="test-area">
-			<VideoModal />
+			<button onClick={handleClick}>Click for modal</button>
+			{isModalOpen && <VideoModal setIsModalOpen={setIsModalOpen} />}
 		</div>
 	);
 }
 function VideoModal(props) {
 	const handleClickModal = (e) => {
-		console.log('Clicked Modal Handle!');
+		props.setIsModalOpen(false);
 	};
 	return (
 		<div className="overlay">
 			<div className="modal">
 				<div className="modal-header">
 					<h2>Movie Title</h2>
-					<button
-						style={{
-							padding: '4px 6px',
-							minWidth: '16px',
-							borderRadius: '16px',
-							border: 'solid 2px black',
-						}}
-						onClick={handleClickModal}
-					>
-						x
-					</button>
+					<Button type="close" onClick={handleClickModal}>
+						X
+					</Button>
 				</div>
 				<div className="modal-body">
-					modal body
 					<div className="modal-trailer-area">
-						movie trailer area
-						<div className="modal-trailer-video">video</div>
-						movie trailer area
+						<div className="iframe-container">
+							<iframe
+								className="ytb-iframe"
+								width="560"
+								height="315"
+								src="https://www.youtube-nocookie.com/embed/yTX0HxTq9wo"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen
+							></iframe>
+						</div>
 					</div>
-					<div className="descriptions">descriptions area</div>
-					modal body
+					<div className="modal-desc">
+						descriptions area
+						<div className="modal-social">social area</div>
+					</div>
 				</div>
 				<div className="modal-footer">This is where the rating is!</div>
 			</div>

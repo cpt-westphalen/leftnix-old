@@ -1,0 +1,9 @@
+.btn-close {
+	margin: 6px;
+	font: monospace;
+	font-weight: 800;
+	min-width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	border: solid 2px #333;
+}
