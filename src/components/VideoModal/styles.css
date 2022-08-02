@@ -36,20 +36,28 @@
 	flex: 0;
 }
 
+.modal-header > h2 {
+	font-size: 2rem;
+	margin: 1rem 0 0 0;
+	padding: 0 1rem;
+}
+
 .modal-body {
 	background-color: #ccc;
+	overflow: hidden;
 	display: flex;
 	flex: 1;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: stretch;
+	flex-wrap: wrap;
 }
 
 .modal-trailer-area {
 	padding: 1rem;
 	margin: 0;
 	background-color: #bbb;
-	flex: 1;
+	flex: 4;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -62,7 +70,8 @@
 	/* padding-top: 56.25%; */
 	aspect-ratio: 16/9;
 	min-height: 360px;
-	height: 100%;
+	width: 100%;
+	min-width: 360px;
 }
 
 .ytb-iframe {
@@ -76,6 +85,7 @@
 
 .modal-desc {
 	background-color: #999;
+	flex: 1 0 320px;
 }
 
 .modal-social {
