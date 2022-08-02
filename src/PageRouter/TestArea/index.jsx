@@ -34,12 +34,12 @@ function VideoModal(props) {
 						<div className="iframe-container">
 							<iframe
 								className="ytb-iframe"
-								width="560"
-								height="315"
+								// width="1080"
+								// height="720"
 								src="https://www.youtube-nocookie.com/embed/yTX0HxTq9wo"
 								title="YouTube video player"
 								frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+								allow="accelerometer; autoplay; encrypted-media;"
 								allowfullscreen
 							></iframe>
 						</div>
