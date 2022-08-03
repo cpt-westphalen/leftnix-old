@@ -1,5 +1,6 @@
 import './styles.css';
 import Button from '../Button';
+import MovieRating from '../MovieRating';
 
 export function VideoModal({ movie, setIsModalOpen }) {
 	const handleClickModal = (e) => {
@@ -47,8 +48,7 @@ export function VideoModal({ movie, setIsModalOpen }) {
 					</div>
 				</div>
 				<div className="modal-footer">
-					This is where the rating is!{' '}
-					{movie.rating && `Rating: ${movie.rating}`}
+					<MovieRating movie={movie} />
 				</div>
 			</div>
 		</div>
@@ -56,8 +56,8 @@ export function VideoModal({ movie, setIsModalOpen }) {
 }
 VideoModal.defaultProps = {
 	movie: {
-		title: '',
-		imgPath: '',
-		rating: '',
+		title: 'Default Movie Title',
+		imgPath: '#',
+		rating: 5,
 	},
 };

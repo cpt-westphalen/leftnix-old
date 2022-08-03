@@ -1,0 +1,8 @@
+.movie-rating {
+	text-align: center;
+}
+
+.movie-rating > h3 {
+	margin: 0;
+	padding: 0;
+}
