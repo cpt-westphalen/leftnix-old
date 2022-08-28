@@ -1,6 +1,7 @@
 import './styles.css';
 import Button from '../Button';
 import MovieRating from '../MovieRating';
+import ModalDesc from '../ModalDesc';
 
 export function VideoModal({ movie, setIsModalOpen }) {
 	const handleClickModal = (e) => {
@@ -33,19 +34,7 @@ export function VideoModal({ movie, setIsModalOpen }) {
 							></iframe>
 						</div>
 					</div>
-					<div className="modal-desc">
-						<img
-							className="modal-desc-cover"
-							width="280px"
-							alt="movie poster"
-							src={movie.imgPath || '#'}
-						/>
-						<p className="modal-desc-text">
-							{movie.desc ||
-								'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum numquam quod exercitationem quibusdam in dicta.'}
-						</p>
-						<div className="modal-desc-social">social area</div>
-					</div>
+					<ModalDesc movie={movie} />
 				</div>
 				<div className="modal-footer">
 					<MovieRating movie={movie} />
