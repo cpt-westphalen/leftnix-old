@@ -183,13 +183,20 @@ a:hover {
 }
 
 .movie-item-desc {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-line-clamp: 3;
 	margin: 0.25rem 0.25rem 1.25rem 0.25rem;
 	max-width: 100%;
 	overflow: hidden;
+}
+
+.line-clamp-sm {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
 	text-overflow: ellipsis;
+}
+
+.movie-item-show {
+	display: block;
 }
 
 .slider-wrapper {
