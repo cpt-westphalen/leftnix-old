@@ -50,6 +50,14 @@ export const LeftSidebar = (props) => {
 				<a href="#">
 					<p className="navLink">LOGOUT</p>
 				</a>
+				<a
+					href="#"
+					onClick={() => {
+						props.setPage('Test');
+					}}
+				>
+					<p className="navLink">Test Page</p>
+				</a>
 			</nav>
 		</div>
 	);

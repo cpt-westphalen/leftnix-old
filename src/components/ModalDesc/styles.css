@@ -1,0 +1,83 @@
+.modal-desc {
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.modal-desc-text {
+	width: 470px;
+	font-size: 16px;
+	font-family: 'Ubuntu Condensed';
+	white-space: pre-wrap;
+	padding: 12px;
+}
+
+.line-clamp {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 10;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.show {
+	display: block;
+}
+
+.modal-desc-show {
+	height: 18px;
+	font-size: 14px;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: -32px;
+	margin-bottom: 32px;
+	z-index: 3;
+	background: linear-gradient(to top, black, transparent);
+}
+
+.modal-desc-social {
+	box-sizing: border-box;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+	padding: 12px;
+}
+
+.social-review-container {
+	display: flex;
+	flex-direction: column;
+	padding: 6px 12px;
+	height: max-content;
+	background-color: #363636;
+	border-left: solid 3px #cd0000;
+	box-sizing: border-box;
+}
+
+.social-review-heading {
+	display: flex;
+	justify-content: space-between;
+}
+
+.social-review-username {
+	text-transform: lowercase;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.social-review-username::before {
+	content: ':';
+}
+
+.social-review-text {
+	margin: 2px 8px;
+	max-width: 100%;
+	font-family: 'Ubuntu Mono';
+	font-size: 14px;
+	white-space: pre-wrap;
+}

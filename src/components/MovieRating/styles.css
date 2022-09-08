@@ -1,0 +1,23 @@
+.movie-rating {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	font-size: 2rem;
+	gap: 50px;
+}
+/* 
+.movie-rating > h3 {
+	margin: 0;
+	padding: 0;
+} */
+
+.movie-rating-rate-btn {
+	background-color: #e10606;
+	border: none;
+	width: 120px;
+	height: 42px;
+	font-size: 22px;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 10px;
+}

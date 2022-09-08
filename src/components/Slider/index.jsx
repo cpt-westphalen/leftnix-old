@@ -1,8 +1,6 @@
-export default function Slider(props) {
+export default function Slider({ id, rating, inputClassName = '' }) {
 	const rate = Math.floor(
-		props.rating.toString()[2]
-			? props.rating.toString()[2]
-			: props.rating.toString()[0]
+		rating.toString()[2] ? rating.toString()[2] : rating.toString()[0]
 	);
 	return (
 		<div className="slider-wrapper">
@@ -11,8 +9,8 @@ export default function Slider(props) {
 				min="1"
 				max="10"
 				value={rate}
-				className={`slider rating-${rate}`}
-				id={`slider-for-${props.id}`}
+				className={`slider rating-${rate}` + ` ${inputClassName}`}
+				id={`slider-for-${id}`}
 				readOnly
 			/>
 		</div>

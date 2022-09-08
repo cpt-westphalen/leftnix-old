@@ -1,7 +1,9 @@
 import Slider from '../Slider';
 import { BASE_IMG_URL } from '../../assets/utils';
+import { useState } from 'react';
 
 export default function MovieCard({ movie }) {
+	const [showingMore, setShowingMore] = useState(false);
 	const imgPath = `${BASE_IMG_URL}w300/${movie['poster_path']}`;
 	/*	
 	const overview = movie['overview'].slice(
@@ -21,6 +23,10 @@ export default function MovieCard({ movie }) {
 		title = title.slice(heroTitleIndex);
 	}
 
+	function handleShowMore() {
+		setShowingMore(!showingMore);
+	}
+
 	return (
 		<div className="movie-item">
 			<img
@@ -34,7 +40,14 @@ export default function MovieCard({ movie }) {
 				<h2 className="movie-item-title hero-title">{superTitle || '\n'}</h2>
 				<h3 className="movie-item-title">{title}</h3>
 			</div>
-			<p className="movie-item-desc">{movie['overview']}</p>
+			<p
+				className={`movie-item-desc ${
+					showingMore ? `movie-item-show` : `line-clamp-sm`
+				}`}
+			>
+				{movie['overview']}
+			</p>
+			<button onClick={handleShowMore}>show more</button>
 			<Slider id={movie.id} rating={movie['vote_average']} />
 		</div>
 	);
