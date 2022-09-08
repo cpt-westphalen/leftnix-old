@@ -1,0 +1,38 @@
+.about-intro {
+	display: flex;
+	align-items: stretch;
+	background: linear-gradient(to right, #0a0a0a, transparent);
+	height: 100%;
+}
+
+.about-col-1 {
+	display: flex;
+	justify-content: center;
+	padding-top: 160px;
+	flex: 0 1 443px;
+}
+
+.about-col-2 {
+	padding-top: 160px;
+	flex: 0 1 666px;
+}
+
+.about-col-3 {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	flex: 1;
+}
+
+.about-intro-title-super {
+	margin: 0;
+	padding: 0;
+	font-size: 64px;
+}
+
+.about-intro-title {
+	margin: 0;
+	padding: 0;
+	font-size: 128px;
+	font-family: 'Bebas Neue';
+}

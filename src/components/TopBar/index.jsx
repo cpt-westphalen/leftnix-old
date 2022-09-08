@@ -1,12 +1,23 @@
 import { useState } from 'react';
+import './styles.css';
 
-export const TopBar = () => {
-	return (
-		<div className="top-bar">
-			<Logo />
-			<TopSearch />
-		</div>
-	);
+export const TopBar = ({ type = 'search' }) => {
+	if (type === 'search') {
+		return (
+			<div className="top-bar">
+				<Logo />
+				<TopSearch />
+			</div>
+		);
+	}
+	if (type === 'slogan') {
+		return (
+			<div className="top-bar">
+				<Logo />
+				<Slogan />
+			</div>
+		);
+	}
 };
 const Logo = () => {
 	return <h2 className="logo">LEFTNIX</h2>;
@@ -67,4 +78,7 @@ const TopSearch = () => {
 			/>
 		</div>
 	);
+};
+const Slogan = () => {
+	return <h4 className="slogan">Are you ready to uncover the truth?!</h4>;
 };
